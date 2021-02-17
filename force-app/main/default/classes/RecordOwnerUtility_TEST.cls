@@ -47,6 +47,7 @@ public with sharing class RecordOwnerUtility_TEST {
 
         Test.startTest();
         System.runAs(runningUser){
+            RecordOwnerUtility.queryAllUserFields = true;
             randomUser = RecordOwnerUtility.getRandomUserByGroupOrQueue('Test_Group');
         }
         Test.stopTest();
